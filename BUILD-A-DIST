@@ -1,0 +1,26 @@
+This document describes how to build a Rakudo Star distribution using
+Dist::Zilla and the dist.ini file.
+
+=Tools
+
+In order to build the distribution, you need to have the following Perl
+modules installed:
+
+* Dist::Zilla (obviously)
+* Dist::Zilla::Plugin::Git::Tag
+* Dist::Zilla::Plugin::GitObtain
+* Dist::Zilla::Plugin::SvnObtain
+
+Once these modules are installed, from the root directory of this 
+repository execute the following command:
+
+    $ dzil build
+
+This will create a distribution based on the current month.  For instance,
+if the current month is October 2010, the distribution built will be
+
+    rakudo-star-2010.10.tar.gz
+
+
+
+
