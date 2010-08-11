@@ -1,0 +1,4 @@
+/rakudo*
+/parrot*
+/modules
+.build
