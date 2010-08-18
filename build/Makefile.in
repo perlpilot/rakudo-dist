@@ -53,24 +53,14 @@ PERL6_EXE      = perl6$(EXE)
 PERL6_LANG_DIR = $(PARROT_LIB_DIR)/languages/perl6
 
 MODULES = \
-  modules/zavolaj \
-  modules/MiniDBI \
-  modules/xml-writer \
-  modules/svg \
-  modules/svg-plot \
-  modules/Math-RungeKutta \
-  modules/Math-Model \
-  modules/mainline \
-  modules/perl6-Config-INI \
-  modules/perl6-File-Find \
-  modules/perl6-Term-ANSIColor \
-  modules/Algorithm-Viterbi \
-  modules/test-mock \
-  modules/Perl6-MIME-Base64 \
-  modules/perl6-lwp-simple \
-  modules/json \
-  modules/yaml-pm6 \
-  modules/form \
+{{
+    my %modules;
+    for my $file (@{$dist->files}) {
+        next unless $file->name =~ m!^(modules/[^/]+)!;
+        $modules{$1}++;
+    }
+    join " \\\n", map { "  $_" } sort keys %modules;
+}}
 
 all: rakudo
 
