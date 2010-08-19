@@ -1,15 +1,13 @@
-This document describes how to build a Rakudo Star distribution using
+This document describes how to build a Rakudo distribution using
 Dist::Zilla and the dist.ini file.
 
-=Tools
+=head2 Building a Distribution
 
-In order to build the distribution, you need to have the following Perl
+In order to build a Rakudo distribution, you need to have the following Perl
 modules installed:
 
 * Dist::Zilla (obviously)
-* Dist::Zilla::Plugin::Git::Tag
-* Dist::Zilla::Plugin::GitObtain
-* Dist::Zilla::Plugin::SvnObtain
+* Dist::Zilla::PluginBundle::Rakudo
 
 Once these modules are installed, from the root directory of this 
 repository execute the following command:
@@ -21,6 +19,9 @@ if the current month is October 2010, the distribution built will be
 
     rakudo-star-2010.10.tar.gz
 
+=head2 Customizing the distribution
 
-
+In order to affect the contents of the distribution, edit the
+F<dist.ini> file to include the appropriate revision of Parrot and
+Rakudo and whatever modules you wish to include.
 
