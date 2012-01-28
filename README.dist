@@ -22,6 +22,6 @@ if the current month is October 2010, the distribution built will be
 =head2 Customizing the distribution
 
 In order to affect the contents of the distribution, edit the
-F<dist.ini> file to include the appropriate revision of Parrot and
+F<dist.ini> file to include the appropriate revision of Parrot, NQP,
 Rakudo and whatever modules you wish to include.
 
