@@ -1,8 +1,8 @@
 This is Rakudo Star, a useful, usable Perl 6 distribution for "early adopters".
 
-This is the 2011.07 release of Rakudo Star.
+This is the {{ $dist->version }} release of Rakudo Star.
 
-Rakudo Star is Copyright (C) 2010, 2011 by the Rakudo Star Team.
+Rakudo Star is Copyright (C) 2010-2012 by the Rakudo Star Team.
 
 License Information
 -------------------
